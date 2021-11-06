@@ -14,7 +14,7 @@ module.exports = async function(deployer, network, accounts) {
 
   // We deploy the TokenFarm
   await deployer.deploy(TokenFarm, dappToken.address, daiToken.address)
-  const TokenFarm = await TokenFarm.deployed()
+  const tokenFarm = await TokenFarm.deployed()
 
   //assign all the DappTokens to the TokenFarm smart contract
   //Transfer all tokens to the tokenfarm (1M)
